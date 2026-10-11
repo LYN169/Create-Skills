@@ -238,3 +238,7 @@ batch 输入格式（`query_id` 建议用“记录编号-查询序号”，便�
 ## 提示词模板
 
 给终端用户（同事等）提供任务时，直接引用 `prompt-template.md`：用户照抄一句基础提示词 + 给出输入文件路径即可，其余由本文件规则默认执行（五字段英文坐标表、XLSX/CSV 各一份、另存不覆盖输入）；固定行为与结果用法写在该文件"使用须知"中，不要求用户粘贴。
+
+## 多 Agent 适配
+
+本 skill 亦可用于 Claude Code 之外的 Agent（Codex 原生兼容本 SKILL.md；DeepSeek/豆包/Work Buddy 等用 `cross-agent.md` 注入指令）。安装方式见 `INSTALL.md`（`python install.py claude|codex|--path <目录>`）；适配层只改安装与触发方式，本文件的查询、消歧、坐标与输出规则对所有 Agent 一致，不存在降级流程。

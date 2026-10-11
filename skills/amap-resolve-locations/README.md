@@ -10,12 +10,26 @@
 
 核心承诺：**AI 可以推断查询方式，但不能推断经纬度；只有确认对应地点的接口坐标才能输出。** 无法确认的地点留空并记录原因，不用乡镇中心、村委会或 `0,0` 冒充成功结果。
 
-## 安装
+## 安装（多 Agent 支持）
+
+本 skill 的核心是**标准库 Python 脚本 + 规则文档**，可用于任何能执行本地命令的 AI Agent：
+Claude Code、OpenAI Codex（原生 Skill 机制），DeepSeek、豆包、Work Buddy、Kimi、通义等
+（通过通用指令注入）。**各 Agent 使用同一套脚本与规则，处理流程和效果完全一致。**
 
 ```bash
-mkdir -p ~/.claude/skills
-cp -r skills/amap-resolve-locations ~/.claude/skills/
+python install.py claude        # Claude Code → ~/.claude/skills/
+python install.py codex         # OpenAI Codex → ~/.codex/skills/（SKILL.md 头格式兼容）
+python install.py --path D:\my\skills   # 其他 Agent：装到任意目录
 ```
+
+| Agent | 触发方式 |
+|---|---|
+| Claude Code | 原生 Skill，自动读取 SKILL.md |
+| Codex | 原生 Skill（兼容本 SKILL.md 的 name/description 头） |
+| DeepSeek / 豆包 / Work Buddy 等 | 把 `cross-agent.md` 全文粘贴进系统提示词/指令/知识库，并授予命令执行权限；脚本按绝对路径调用 |
+
+安装器按白名单复制，**绝不复制凭据文件**；目标目录已存在时只更新同名文件、不删除多余内容。
+详细说明见 [INSTALL.md](./INSTALL.md)。
 
 依赖：Python 3.8+（标准库）；输出 XLSX 需要 `pip install openpyxl`（CSV 流程纯标准库，不装也能用）。
 
