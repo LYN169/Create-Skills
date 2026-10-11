@@ -1,0 +1,18 @@
+# 高德 Web 服务 Key 配置文件模板
+#
+# 推荐方式一（环境变量，不落盘）：
+#   Windows PowerShell:  setx AMAP_KEY "YOUR_AMAP_KEY_HERE"
+#   Linux/macOS:        export AMAP_KEY=YOUR_AMAP_KEY_HERE
+#
+# 推荐方式二（凭据文件在仓库之外，用环境变量指向它）：
+#   把 Key 单独写成一行保存到任意私人路径（如 C:\Users\你\.amap_key.txt），然后
+#   setx AMAP_KEY_FILE "C:\Users\你\.amap_key.txt"
+#
+# 兼容方式三（本文件复制为 amap_key.txt，已被 .gitignore 排除，绝不提交）：
+#   把下面一行的占位符替换为你的 Key 即可。
+# 注意：amap_key.txt 位于脚本同目录，容易误打包，仅作本地兼容；
+#       不要把它写进任何发布包、Git 仓库或聊天消息。
+#
+# 获取 Key：高德开放平台 → 控制台 → 应用管理 → 创建应用 → 添加 Key（服务平台选「Web 服务」）
+
+YOUR_AMAP_KEY_HERE

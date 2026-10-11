@@ -1,0 +1,25 @@
+# 高德 Key 本地配置文件 —— 绝不提交（任意层级）
+amap_key.txt
+
+# 环境变量文件
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+
+# 查询计划与结果（会话产物）
+plan.json
+results.json
+
+# 日志、缓存与临时文件
+*.log
+*.tmp
+*~
+*.bak
+*.zip
+results/
+output/
+tmp/

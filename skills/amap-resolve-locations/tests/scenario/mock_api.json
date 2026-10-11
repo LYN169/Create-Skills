@@ -1,0 +1,90 @@
+{
+  "_说明": "模拟高德接口响应。每个条目对应一次查询的返回，格式与 scripts/amap_api.py 一致。未列出的查询一律视为 count=0、无结果。",
+  "查询1": {
+    "request": { "type": "geocode", "address": "陕西省咸阳市武功县苏坊镇凤安村", "city": "咸阳市" },
+    "response": {
+      "status": "ok",
+      "count": 1,
+      "geocodes": [
+        { "formatted_address": "陕西省咸阳市武功县苏坊镇凤安村", "location": "108.100000,34.300000", "coord_error": null, "level": "村庄", "adcode": "610431", "province": "陕西省", "city": "咸阳市", "district": "武功县", "township": "苏坊镇", "towncode": "610431104" }
+      ]
+    }
+  },
+  "查询2": {
+    "request": { "type": "search", "keywords": "凤安村", "city": null, "citylimit": false, "page": 1, "offset": 10 },
+    "response": {
+      "status": "ok",
+      "count": 2,
+      "pois": [
+        { "id": "P1", "name": "凤安村", "type": "地名地址信息;村庄级地名;村", "address": "宝鸡市眉县金渠镇凤安村", "pname": "陕西省", "cityname": "宝鸡市", "adname": "眉县", "location": "107.700000,34.200000", "coord_error": null },
+        { "id": "P2", "name": "凤安村", "type": "地名地址信息;村庄级地名;村", "address": "咸阳市武功县苏坊镇凤安村", "pname": "陕西省", "cityname": "咸阳市", "adname": "武功县", "location": "108.100000,34.300000", "coord_error": null }
+      ]
+    }
+  },
+  "查询3": {
+    "request": { "type": "search", "keywords": "凤安村", "city": "610431", "citylimit": true, "page": 1, "offset": 10 },
+    "response": {
+      "status": "ok",
+      "count": 1,
+      "pois": [
+        { "id": "P2", "name": "凤安村", "type": "地名地址信息;村庄级地名;村", "address": "咸阳市武功县苏坊镇凤安村", "pname": "陕西省", "cityname": "咸阳市", "adname": "武功县", "location": "108.100000,34.300000", "coord_error": null }
+      ]
+    }
+  },
+  "查询4": {
+    "request": { "type": "geocode", "address": "陕西省咸阳市武功县苏坊镇李家沟", "city": "咸阳市" },
+    "response": {
+      "status": "ok",
+      "count": 1,
+      "geocodes": [
+        { "formatted_address": "陕西省咸阳市武功县苏坊镇凤安村", "location": "108.110000,34.310000", "coord_error": null, "level": "村庄", "adcode": "610431", "province": "陕西省", "city": "咸阳市", "district": "武功县", "township": "苏坊镇", "towncode": "610431104" }
+      ]
+    }
+  },
+  "查询5": {
+    "request": { "type": "search", "keywords": "李家沟", "city": "610431", "citylimit": true, "page": 1, "offset": 10 },
+    "response": {
+      "status": "ok",
+      "count": 1,
+      "pois": [
+        { "id": "P3", "name": "凤安村村委会", "type": "机构团体;政府机关;村委会", "address": "咸阳市武功县苏坊镇凤安村", "pname": "陕西省", "cityname": "咸阳市", "adname": "武功县", "location": "108.110000,34.310000", "coord_error": null }
+      ]
+    }
+  },
+  "查询6": {
+    "request": { "type": "geocode", "address": "陕西省咸阳市武功县王村", "city": "咸阳市" },
+    "response": {
+      "status": "ok",
+      "count": 1,
+      "geocodes": [
+        { "formatted_address": "陕西省咸阳市武功县武功镇", "location": "108.200000,34.400000", "coord_error": null, "level": "乡镇", "adcode": "610431", "province": "陕西省", "city": "咸阳市", "district": "武功县", "township": "武功镇", "towncode": "610431102" }
+      ]
+    }
+  },
+  "查询7": {
+    "request": { "type": "search", "keywords": "王村", "city": "610431", "citylimit": true, "page": 1, "offset": 10 },
+    "response": {
+      "status": "ok",
+      "count": 0,
+      "pois": []
+    }
+  },
+  "查询8": {
+    "request": { "type": "geocode", "address": "陕西省咸阳市武功县武功镇营上村", "city": "咸阳市" },
+    "response": {
+      "status": "ok",
+      "count": 0,
+      "geocodes": []
+    }
+  },
+  "查询9": {
+    "request": { "type": "search", "keywords": "营上村", "city": "610431", "citylimit": true, "page": 1, "offset": 10 },
+    "response": {
+      "status": "ok",
+      "count": 1,
+      "pois": [
+        { "id": "P4", "name": "营上村", "type": "地名地址信息;村庄级地名;村", "address": "咸阳市武功县武功镇营上村", "pname": "陕西省", "cityname": "咸阳市", "adname": "武功县", "location": "108.300000,34.500000", "coord_error": null }
+      ]
+    }
+  }
+}

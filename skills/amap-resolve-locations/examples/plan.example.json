@@ -1,0 +1,23 @@
+[
+  {
+    "query_id": "r01-a",
+    "type": "geocode",
+    "address": "陕西省咸阳市武功县苏坊镇凤安村",
+    "city": "咸阳市"
+  },
+  {
+    "query_id": "r02-a",
+    "type": "search",
+    "keywords": "苏坊镇凤安村",
+    "city": "610431",
+    "citylimit": true,
+    "page": 1,
+    "offset": 10
+  },
+  {
+    "query_id": "r03-a",
+    "type": "regeocode",
+    "lng": "108.1326",
+    "lat": "34.3364"
+  }
+]

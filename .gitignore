@@ -1,0 +1,19 @@
+# 环境变量文件（含凭据）
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+
+# 日志、缓存、临时文件与发布压缩包
+*.log
+*.tmp
+*~
+*.bak
+*.zip
